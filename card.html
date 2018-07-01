@@ -67,7 +67,7 @@
     </g>
   </symbol>
 
-  <symbol id="logo_horizontal">
+  <symbol id="logo_horizontal" width="277px" height="58px" viewBox="0 0 277 58">
     <defs>
         <polygon id="path-1" points="0 0 144.6194 0 144.6194 17.438148 0 17.438148"></polygon>
         <polygon id="path-3" points="0.106141573 0.16632 7.16355169 0.16632 7.16355169 7.248276 0.106141573 7.248276"></polygon>
@@ -163,6 +163,7 @@
     <div class="container container_flex">
       <div class="header__block">
         <div class="city">
+          <i class="fas fa-map-marker-alt"></i>
           <a class="city__current" href="#">Москва</a>
         </div>
       </div>
@@ -182,23 +183,35 @@
     <div class="container container_flex">
       <div class="header__block">
         <div class="header__logo">
-          <svg>
-            <use xlink:href="#logo_horizontal"/>
-          </svg>
-          <p class="header__logo-slogan">Сделано в Монголии, Создано для Мира</p>
+          <a href="/">
+            <svg>
+              <use xlink:href="#logo_horizontal"/>
+            </svg>
+            <p class="header__logo-slogan">Сделано в Монголии, Создано для Мира</p>
+          </a>
         </div>
       </div>
       <div class="header__block">
         <div class="search">
-
+          <label class="field">
+            <span class="field__input">
+              <input type="text">
+            </span>
+          </label>
         </div>
       </div>
       <div class="header__block">
-        <a href="#" class="header__favorites">Отложенные товары (0)</a>
+        <span class="header__favorites">
+          <i class="far fa-heart"></i>
+          <a href="#">Отложенные товары (0)</a>
+        </span>
       </div>
       <div class="header__block">
-        <div class="header__cart">
-          <span>12 000 р.</span>
+        <div class="header__cart" data-basket="25">
+          <a href="basket.html">
+            <i class="fas fa-shopping-basket"></i>
+            <span>12 000 р.</span>
+          </a>
         </div>
       </div>
     </div>
@@ -235,7 +248,7 @@
     <a href="#">О компании</a>
   </div>
 </nav>
-  
+
     </div>
   </div>
 
@@ -694,7 +707,7 @@
       </div>
       <div class="card__buttons">
         <button class="btn btn_extrasmall">В корзину</button>
-        <button class="btn btn_extrasmall btn_light">В один клик</button>
+        <button data-open="oneclick" class="btn btn_extrasmall btn_light">В один клик</button>
       </div>
     </div>
   </div>
@@ -727,7 +740,7 @@
       </div>
       <div class="card__buttons">
         <button class="btn btn_extrasmall">В корзину</button>
-        <button class="btn btn_extrasmall btn_light">В один клик</button>
+        <button data-open="oneclick" class="btn btn_extrasmall btn_light">В один клик</button>
       </div>
     </div>
   </div>
@@ -760,7 +773,7 @@
       </div>
       <div class="card__buttons">
         <button class="btn btn_extrasmall">В корзину</button>
-        <button class="btn btn_extrasmall btn_light">В один клик</button>
+        <button data-open="oneclick" class="btn btn_extrasmall btn_light">В один клик</button>
       </div>
     </div>
   </div>
@@ -793,7 +806,7 @@
       </div>
       <div class="card__buttons">
         <button class="btn btn_extrasmall">В корзину</button>
-        <button class="btn btn_extrasmall btn_light">В один клик</button>
+        <button data-open="oneclick" class="btn btn_extrasmall btn_light">В один клик</button>
       </div>
     </div>
   </div>
@@ -887,7 +900,23 @@
         </p>
       </div>
       <div class="footer__block">
-        <div class="social"></div>
+        <div class="social">
+          <a href="#">
+            <i class="fab fa-viber"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-telegram"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
       </div>
       <div class="footer__block">
         <div class="footer__dev">
