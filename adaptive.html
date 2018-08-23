@@ -167,6 +167,18 @@
     </g>
   </symbol>
 
+  <symbol id="menu" viewBox="0 0 18 12">
+    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="iPhone-SE" transform="translate(-287.000000, -27.000000)">
+            <g id="Group" transform="translate(287.000000, 27.000000)">
+                <rect id="Rectangle-9" x="0" y="0" width="18" height="2" rx="1"></rect>
+                <rect id="Rectangle-9-Copy-3" x="0" y="10" width="18" height="2" rx="1"></rect>
+                <rect id="Rectangle-9-Copy-2" x="4" y="5" width="14" height="2" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+  </symbol>
+
 </svg>
 
 
@@ -177,6 +189,14 @@
         <div class="city">
           <i class="fas fa-map-marker-alt"></i>
           <a class="city__current" href="#">Москва</a>
+          <div class="city__drop">
+            <label class="field">
+              <span class="field__input">
+                <input type="text" placeholder="Начните вводить название города">
+              </span>
+            </label>
+            <button class="btn btn_light">Ок</button>
+          </div>
         </div>
       </div>
       <div class="header__block">
@@ -208,29 +228,35 @@
   <label class="field field_search">
     <span class="field__input">
       <input type="text" placeholder="Поиск">
-      <button class="field__btn">
+      <a href="#search" class="field__btn">
         <svg>
           <use xlink:href="#search"/>
         </svg>
-      </button>
+      </a>
     </span>
   </label>
 </div>
 
       </div>
       <div class="header__block">
-        <span class="header__favorites">
+        <span class="header__favorites" data-count="0">
           <i class="far fa-heart"></i>
           <a href="#">Отложенные товары (0)</a>
         </span>
       </div>
       <div class="header__block">
-        <div class="header__cart" data-basket="25">
+        <div class="header__cart" data-count="25">
           <a href="basket.html">
             <i class="fas fa-shopping-basket"></i>
             <span>12 000 р.</span>
           </a>
         </div>
+
+        <button class="menu">
+          <svg>
+            <use xlink:href="#menu"/>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -240,6 +266,14 @@
       <nav class="nav">
   <div class="nav__item">
     <a href="#">Каталог товаров</a>
+    <div class="drop">
+      <a href="#">Носки, чулки, гольфы</a>
+      <a href="#">Пояса, жилеты, наколенники</a>
+      <a href="#">Женская одежда</a>
+      <a href="#">Одеяла и подушки</a>
+      <a href="#">Пледы</a>
+      <a href="#">Палантины</a>
+    </div>
   </div>
   <div class="nav__item">
     <a href="#">Оптовику</a>
@@ -274,60 +308,6 @@
 
 
 	<div class="page__wrapper">
-		<section class="section">
-			<div class="container">
-				<div class="tile">
-	<div class="tile__main">
-		<div class="slider" data-slider="tile">
-			<div class="slider__slides">
-				<div class="block block_big">
-					<a href="#" class="block__link"></a>
-					<div class="block__info">
-						<span class="block__caption block__caption_strong">Одеяло детское</span>
-						<p class="block__text">100% натуральная шерсть. Производство Монголии</p>
-					</div>
-					<img src="/pictures/tile-big.jpg" alt="Одеяло детское" class="block__img">
-				</div>
-				<div class="block block_big">
-					<a href="#" class="block__link"></a>
-					<div class="block__info">
-						<span class="block__caption block__caption_strong">Одеяло детское</span>
-						<p class="block__text">100% натуральная шерсть. Производство Монголии</p>
-					</div>
-					<img src="/pictures/tile-big.jpg" alt="Одеяло детское" class="block__img">
-				</div>
-				<div class="block block_big">
-					<a href="#" class="block__link"></a>
-					<div class="block__info">
-						<span class="block__caption block__caption_strong">Одеяло детское</span>
-						<p class="block__text">100% натуральная шерсть. Производство Монголии</p>
-					</div>
-					<img src="/pictures/tile-big.jpg" alt="Одеяло детское" class="block__img">
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="tile__side">
-		<div class="block">
-			<a href="#" class="block__link"></a>
-			<div class="block__info">
-				<span class="block__caption">Одеяло детское</span>
-				<p class="block__text">100% натуральная шерсть. Производство Монголии</p>
-			</div>
-			<img src="/pictures/tile-1.jpg" alt="Одеяло детское" class="block__img">
-		</div>
-		<div class="block">
-			<a href="#" class="block__link"></a>
-			<div class="block__info">
-				<span class="block__caption">Одеяло детское</span>
-				<p class="block__text">100% натуральная шерсть. Производство Монголии</p>
-			</div>
-			<img src="/pictures/tile-2.jpg" alt="Одеяло детское" class="block__img">
-		</div>
-	</div>
-</div>
-			</div>
-		</section>
 
 		<section class="section">
 			<div class="container">
@@ -622,114 +602,6 @@
 			</div>
 		</section>
 
-		<section class="section">
-			<div class="container">
-				<div class="title">
-					<div class="title__wrap">
-						<h2>Актуально</h2>
-						<p>Spring summer woman 2018</p>
-					</div>
-				</div>
-				<div class="tile">
-	<div class="tile__main">
-		<div class="block block_big">
-			<a href="#" class="block__link"></a>
-			<div class="block__info">
-				<span class="block__caption block__caption_strong">Одеяло детское</span>
-				<p class="block__text">100% натуральная шерсть. Производство Монголии</p>
-			</div>
-			<img src="/pictures/tile-big.jpg" alt="Одеяло детское" class="block__img">
-		</div>
-	</div>
-	<div class="tile__side">
-		<div class="block">
-			<a href="#" class="block__link"></a>
-			<div class="block__info">
-				<span class="block__caption">Одеяло детское</span>
-				<p class="block__text">100% натуральная шерсть. Производство Монголии</p>
-			</div>
-			<img src="/pictures/tile-1.jpg" alt="Одеяло детское" class="block__img">
-		</div>
-		<div class="block">
-			<a href="#" class="block__link"></a>
-			<div class="block__info">
-				<span class="block__caption">Одеяло детское</span>
-				<p class="block__text">100% натуральная шерсть. Производство Монголии</p>
-			</div>
-			<img src="/pictures/tile-2.jpg" alt="Одеяло детское" class="block__img">
-		</div>
-	</div>
-</div>
-
-			</div>
-		</section>
-
-		<section class="section section_bg">
-			<div class="container">
-				<div class="title">
-					<h2>Магазин натуральной монгольской одежды</h2>
-					<p>Экологичность, натуральные материалы, любовь к себе и желание окружать себя только приятными и полезными вещами — замечательный тренд, и все больше людей стремятся ему следовать. Натуральная косметика, правильное питание, одежда из натуральных материалов — вот что выбирают те, кто заботится о себе.</p>
-				</div>
-			</div>
-		</section>
-
-		<section class="section">
-			<div class="container">
-				<div class="i-blog">
-  <div class="i-blog__image">
-    <span class="i-blog__title i-blog__title_white i-blog__title_first">Одежда из</span>
-    <span class="i-blog__title i-blog__title_right i-blog__title_white i-blog__title_second">Натуральных материалов</span>
-    <img src="pictures/i-blog.jpg" alt="">
-  </div>
-  <div class="i-blog__block i-blog__block_left">
-    <span class="i-blog__title">Одежда из</span>
-    <div class="i-blog__text">
-      <p>
-        Магазин одежды из Монголии “Монголка.рф” рад помочь вам в составлении
-        нового гардероба. Одежда из шерсти овцы и верблюда, из пуха яка от
-        производителя не только красива внешне и приятна в носке, но и полезна
-        для здоровья — она обладает целебными свойствами: согревает, улучшает
-        кровообращение, помогает бороться с болями в суставах и мышцах.
-      </p>
-    </div>
-  </div>
-  <div class="i-blog__block i-blog__block_right">
-    <span class="i-blog__title i-blog__title_right">Натуральных материалов</span>
-    <div class="i-blog__text i-blog__text_right">
-      <p>
-        Мы первые в России получили статус официального дистрибьютора одного из
-        двух крупнейших производств чулочно-носочных изделий Монголии — заводом
-        TOD. “Монголка” гарантирует своим покупателям отличное качество всех
-        изделий, ведь мы работаем напрямую с производителями, сами контролируем
-        состав, ассортимент. Позвольте себе добавить в жизнь чуточку полезной
-        роскоши — эксклюзивной одежды из пуха яка и изделия из верблюжьей шерсти.
-      </p>
-    </div>
-  </div>
-</div>
-
-			</div>
-		</section>
-
-		<section class="section">
-			<div class="container">
-				<div class="subscribe">
-					<div class="title">
-						<h2>Скидка <strong>10%</strong></h2>
-						<p>за подписку, на первый заказ</p>
-					</div>
-					<div>
-						<label class="field field_subscribe">
-							<span class="field__input">
-								<input type="text" placeholder="E-mail">
-								<button class="btn btn_ok">ОК</button>
-							</span>
-						</label>
-					</div>
-				</div>
-			</div>
-		</section>
-
 	</div>
 
 	<footer class="footer">
@@ -807,7 +679,7 @@
           Изделия из кашемира, шерсти верблюда, овцы и яка оптом и в розницу
         </p>
       </div>
-      <div class="footer__block">
+      <div class="footer__block footer__social">
         <div class="social">
           <a href="#">
             <i class="fab fa-viber"></i>
